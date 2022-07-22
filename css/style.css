@@ -1,42 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
 :root {
     --border-button: #738b9f;
     --display-button-color: #424c52;
     --operator-button-color: #d2dce4;
     --number-button: #eff2f5;
     --equal-button-color: #f77077;
+    --gap: 2px;
 
 }
+
 .container {
-    width: 250px;
-    height: 300px;
+    margin: 10px;
+    min-width: 250px;
+    max-width: 70vh;
+    min-height: 250px;
+    max-height: 70vh;
     background-color: var(--border-button);
+
+    border-radius: 5%;
+    overflow: hidden;
+    text-align: center;
+
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows:  repeat(6, 1fr);
-    border-radius: 5%;
-    overflow: hidden;
+
+    gap: var(--gap);
 }
 
 .display {
     grid-column: 1 / -1;
     grid-row: 1;
     background-color: var(--display-button-color);
+    text-align: right;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+}
+
+.display>p {
+    margin: 3% 10% 3% 90%;
 }
 
 .operator {
+    display: block;
+    position: relative;
     grid-column: 1 / 5;
     grid-row: 2 ;
+}
+
+.button1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    gap: var(--gap);
+}
+
+button {
+    border: none;
+    font-size: 1.2rem;
+}
+
+.button1>button {
     background-color: var(--operator-button-color);
 }
 
 .number {
+    display: block;
+    position: relative;
     grid-column: 1 / 4;
     grid-row: 3 / -1 ;
+    gap: var(--gap);
+}
+
+.button2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    gap: var(--gap);
+}
+
+.button2>button {
     background-color: var(--number-button);
 }
 
 .equal {
+    
     grid-column: -2;
     grid-row: span 4 ;
     background-color: var(--equal-button-color);
+    position: relative;
+}
+
+.equal>button {
+    background-color: unset;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    gap: var(--gap);
 }
