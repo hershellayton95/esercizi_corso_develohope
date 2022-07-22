@@ -1,1 +1,47 @@
+:root {
+    --border-button: #738b9f;
+    --display-button-color: #424c52;
+    --operator-button-color: #d2dce4;
+    --number-button: #eff2f5;
+    --equal-button-color: #f77077;
 
+}
+.container {
+    width: 250px;
+    height: 300px;
+    background-color: var(--border-button);
+    display: grid;
+    grid-template-areas:
+        "display display display display"
+        "oper oper oper oper"
+        "number number number equal"
+        "number number number equal"
+        "number number number equal"
+        "number number number equal";
+    gap: 1px;
+}
+
+ul>li{
+    list-style-type: none;
+    margin: auto;
+}
+
+.display {
+    grid-area: display;
+    background-color: var(--display-button-color);
+}
+
+.operator {
+    grid-area: oper;
+    background-color: var(--operator-button-color);
+}
+
+.number {
+    grid-area: number;
+    background-color: var(--number-button);
+}
+
+.equal {
+    grid-area: equal;
+    background-color: var(--equal-button-color);
+}
