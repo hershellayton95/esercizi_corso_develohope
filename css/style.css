@@ -11,37 +11,32 @@
     height: 300px;
     background-color: var(--border-button);
     display: grid;
-    grid-template-areas:
-        "display display display display"
-        "oper oper oper oper"
-        "number number number equal"
-        "number number number equal"
-        "number number number equal"
-        "number number number equal";
-    gap: 1px;
-}
-
-ul>li{
-    list-style-type: none;
-    margin: auto;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows:  repeat(6, 1fr);
+    border-radius: 5%;
+    overflow: hidden;
 }
 
 .display {
-    grid-area: display;
+    grid-column: 1 / -1;
+    grid-row: 1;
     background-color: var(--display-button-color);
 }
 
 .operator {
-    grid-area: oper;
+    grid-column: 1 / 5;
+    grid-row: 2 ;
     background-color: var(--operator-button-color);
 }
 
 .number {
-    grid-area: number;
+    grid-column: 1 / 4;
+    grid-row: 3 / -1 ;
     background-color: var(--number-button);
 }
 
 .equal {
-    grid-area: equal;
+    grid-column: -2;
+    grid-row: span 4 ;
     background-color: var(--equal-button-color);
 }
