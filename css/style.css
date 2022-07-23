@@ -14,13 +14,10 @@
 }
 
 .container {
-    margin: 10px;
-    min-width: 250px;
-    max-width: 70vh;
-    min-height: 250px;
-    max-height: 70vh;
+    width: 400px;
+    height: 400px;
     background-color: var(--border-button);
-
+    margin: 1px 3px;
     border-radius: 5%;
     overflow: hidden;
     text-align: center;
@@ -43,7 +40,7 @@
 }
 
 .display>p {
-    margin: 3% 10% 3% 90%;
+    margin: 20px;
 }
 
 .operator {
