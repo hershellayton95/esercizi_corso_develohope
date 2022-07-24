@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+}
+
+#yellow {
+    order: 1;
+    flex-grow: 1;
+}
+
+#red {
+    order: 2;
+    flex-grow: 1;
+}
+
+#green {
+    order: 3;
+    flex-grow: 1;
+}
+
+#orange {
+    order: 4;
+    flex-basis: 20em;
+}
+
+#blue {
+    order: 5;
+    flex-grow: 1;
+}
+
