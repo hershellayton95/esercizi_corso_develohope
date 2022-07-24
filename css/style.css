@@ -1,1 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1em;
+}
+nav {
+    flex: 1;
+    padding: 1em;
+    font-size: 1rem;
+    background-color: #212529;
+    color: white;
+}
+
+div {
+    flex: 2;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: unset;
+    text-decoration: none;
+}
+
+.disabled {
+    cursor: default;
+    pointer-events: none;        
+    color: grey;
+}
+
+
+input[type="search"]{
+    font-size: 1rem;
+    border: 1px solid #28a745;
+    border-radius: 0.3em;
+    height: 2.5em;
+}
+
+input[type="submit"]{
+    font-size: 1rem;
+    color: #28a745;
+    border: 1px solid #28a745;
+    border-radius: 0.3em;
+    margin: 0 auto ;
+    padding: 0 16px;
+    height: 2.5em;
+    background: transparent;
+}
+input[type="submit"]:hover{
+    color: initial;
+    background: #28a745;
+    transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+button{
+    display: none;
+}
+
+
+@media screen and (max-width: 768px){
+    form{
+        display: none;
+    }
+
+    button{
+        display: inline-block;
+        font-size: 1rem;
+        border: 1px solid transparent;
+        border-radius: 0.3em;
+        background: transparent;
+    }
+
+    span{
+        background: url('/assets/hamburger.svg');
+        display: inline-block;
+        width: 1.5em;
+        height: 1.5em;
+
+    }  
+}
