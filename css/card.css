@@ -1,13 +1,14 @@
 .card {
   width: 350px;
   height: 500px;
-  background-color: lightgray;
+  background-color: #E3E3E3;
   border-radius: 1.5em;
   grid-template-rows: 60px 250px auto 150px;
   font-family: sans-serif;
   font-size: 0.8em;
   box-shadow: 1px 1px 5px gray;
   margin: 10px;
+  overflow: hidden;
 }
 
 #user {
@@ -31,6 +32,7 @@
 #row1 {
   justify-content: space-evenly;
   column-gap: 100px;
+  background-color: #b3b3b3;
 }
 
 #row2 {
