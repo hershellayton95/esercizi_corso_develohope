@@ -1,1 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
 
+body {
+    width: 100vw;
+    height: 100vh;
+    display:grid;
+    grid-template-columns: 20% 80%;
+}
+
+aside {
+    display: flex;
+    justify-content: center;
+    background-color: #C4C4C4;
+    padding-top: 1rem;
+}
+
+.logo {
+    width: 80%;
+    height: 2rem;
+    background-color: #828ACF;
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #F8F4F4;
+    padding: 5px;
+}
+
+header > .logo {
+    display: none;
+}
+
+header > h2 {
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    padding-top: 10px;
+    background-color: #C4C4C4;
+}
+main {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+    height: 20vw;
+    background-color: #DECACA;
+}
+
+article > form {
+    width: 20vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 3rem;
+}
+
+form > input[type=search] {
+    width: 100%;
+    height: 1.5rem;
+}
+
+form > input[type=submit] {
+    width: 5rem;
+    height: 1.5rem;
+}
+
+article + div {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin: 1em;
+    background-color: #C4C4C4;
+}
+
+
+@media screen and (max-width:600px){
+body {
+    display: block;
+}
+
+    .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+
+aside {
+    display: none;
+}
+
+header {
+    justify-content: space-between;
+}
+
+.logo {
+    width: 30%;
+    height: 2rem;
+    background-color: #828ACF;
+}
+
+header > .logo {
+    display: block;
+}
+
+main {
+    width: 100%;
+    height: 80vh;
+    display: block;
+}
+article {
+    width: 100%;
+    height: 50%;
+}
+
+
+article > form {
+    width: 50vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 0rem;
+}
+
+form > input[type=submit] {
+    display: none;
+}
+
+article {
+    background-color: #C4C4C4;
+}
+
+article + div {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: 1em;
+    background-color: #C4C4C4;
+}
+
+}
