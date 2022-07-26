@@ -92,3 +92,13 @@ button{
 
     }  
 }
+
+@media screen and (max-width: 500px){
+    ul.flex{
+        display: none;
+    }
+    .flex {
+        
+        justify-content: flex-end;
+    }
+}
