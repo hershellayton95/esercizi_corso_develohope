@@ -4,34 +4,88 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Prova Layout1</title>
+    <title>Prova Layout 2</title>
     <link rel="stylesheet" href="css/style.css" />
   </head>
 
   <body>
-    <aside>
-      <div class="logo"></div>
-    </aside>
-    <div class="container">
-      <header>
-        <div class="logo"></div>
-        <h2>DH</h2>
-      </header>
-
-      <main>
-        <article>
-            <form action="">
-              <input
-                type="search"
-                name="search"
-                id="search"
-                placeholder="Cerca..."
-              />
-              <input type="submit" value="DH" />
-            </form>
-        </article>
-        <div></div>
+    <div class="grid wrapper">
+      <aside class="flex flex-col side_sx">
+        <div class="flex flex-col upside_sx">
+          <div class="flex logo_sx">
+            <div class="logo_img_sx"></div>
+            <div class="logo_string_sx"></div>
+          </div>
+          <div class="flex flex-col list_sx">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+        <div class="downside_sx">
+          <div class="downside"></div>
+        </div>
+      </aside>
+      <main class="grid">
+        <header class="flex header">
+          <div></div>
+          <div></div>
+        </header>
+        <nav class="flex">
+          <div class="flex nav_sx">
+            <div></div>
+          </div>
+          <div class="flex nav_dx">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </nav>
+        <section class="grid">
+          <article class="downside"></article>
+          <article class="downside"></article>
+          <article class="downside"></article>
+        </section>
       </main>
+      <aside class="grid side_dx">
+        <div class="flex upside_dx logo_dx">
+            <div class="logo_img_dx"></div>
+            <div class="logo_string_dx"></div>
+          </div>
+          <div class="flex flex-col list_dx">
+            <div class="list_title"></div>
+            <div class="grid list_items">
+              <div></div>
+              <div></div>
+            </div>
+            <div class="grid list_items">
+              <div></div>
+              <div></div>
+            </div>
+            <div class="grid list_items">
+              <div></div>
+              <div></div>
+            </div>
+            <div class="list_title"></div>
+            <div class="grid list_items">
+              <div></div>
+              <div></div>
+            </div>
+            <div class="grid list_items">
+              <div></div>
+              <div></div>
+            </div>
+            <div class="grid list_items">
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+        <div class="downside_dx">
+          <div class="downside"></div>
+        </div>
+    </aside>
     </div>
   </body>
 </html>
