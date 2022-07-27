@@ -43,13 +43,13 @@
 .logo_img_sx {
     width: 35px;
     height: 35px;
-    background-color: gray;
+    background-color: #c4c4c4;
 }
 
 .logo_string_sx {
     width: 120px;
     height: 35px;
-    background-color: gray;
+    background-color: #c4c4c4;
 }
 
 .list_sx {
@@ -61,7 +61,7 @@
 .list_sx div {
     width: 100%;
     height: 35px;
-    background-color: gray;
+    background-color: #c4c4c4;
 }
 .downside_sx {
     width: 100%;
@@ -71,7 +71,7 @@
     width: 100%;
     height: 100%;
     border-radius: 0.5em;
-    background-color: gray;
+    background-color: #c4c4c4;
 }
 
 main {
@@ -90,14 +90,14 @@ header{
 header>div:first-child{
     width:50%;
     height:50px;
-    background-color: gray;
+    background-color: #c4c4c4;
     border-radius: 0.5em;
 }
 
 header>div:last-child{
     width:50px;
     height:50px;
-    background-color: gray;
+    background-color: #c4c4c4;
 }
 
 
@@ -116,7 +116,7 @@ nav>div{
 nav > .nav_sx > div{
     width:50%;
     height:35px;
-    background-color: gray;
+    background-color: #c4c4c4;
 }
 
 .nav_dx {
@@ -126,7 +126,7 @@ nav > .nav_sx > div{
 nav > .nav_dx > div{
     width:30%;
     height:35px;
-    background-color: gray;
+    background-color: #c4c4c4;
 }
 
 main > section{
@@ -173,14 +173,14 @@ main > section > article:last-child{
 .logo_img_dx {
     width: 40px;
     height: 40px;
-    background-color: gray;
+    background-color: #c4c4c4;
     border-radius: 50%;
 }
 
 .logo_string_dx {
     width: 150px;
     height: 40px;
-    background-color: gray;
+    background-color: #c4c4c4;
 }
 
 .list_dx {
@@ -197,7 +197,7 @@ main > section > article:last-child{
 
 .list_dx > .list_title {
     width: 75%;
-    background-color: gray;
+    background-color: #c4c4c4;
 }
 
 .list_items{
@@ -205,7 +205,7 @@ main > section > article:last-child{
     column-gap: 10px;
 }
 .list_items > div{
-    background-color: gray;
+    background-color: #c4c4c4;
 }
 
 .downside_dx {
