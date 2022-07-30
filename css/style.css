@@ -70,12 +70,15 @@ main article {
 
 article > header{
     flex-grow: 1;
+    justify-content: center;
 }
 article > section{
     flex-grow: 8;
+    justify-content: center;
 }
 article > footer{
     flex-grow: 1;
+    justify-content: center;
 }
 
 h2 {
