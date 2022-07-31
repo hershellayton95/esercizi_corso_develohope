@@ -2,102 +2,100 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
-}
-.flex {
-    display: flex;
-    gap:10px
-}
-.flex-col {
-    flex-direction: column;
-}
-body {
-    justify-content: center;
-}
-.wrapper {
-    flex-direction: column;
-    align-items: stretch;
-    width: 80vw;
 }
 
-.navfooter {
-    padding: 10px 20px;
-    justify-content: space-between;
-    background-color: pink;
-    align-items: center;
-    flex-grow: 1;
+body{
+    text-align: center;
+    height: 100vh;
+    display: grid;
+    grid-template-areas: 
+    "header nav nav nav"
+    "hero hero hero hero"
+    "hero hero hero hero"
+    "hero hero hero hero"
+    "hero hero hero hero"
+    "main main . image"
+    "main main . image"
+    "main main . extra"
+    "main main . extra"
+    "banner banner banner banner"
+    "banner banner banner banner";
 }
 
-.navfooter h1 {
-    padding: 10px 5px 8px 5px;
-    aspect-ratio: 2/1;
-    border: 1px solid black;
-    font-size: 1.5rem;
-    text-transform: uppercase;
+header{
+    background-color: black;
+    color:white;
+    grid-area: header;
 }
 
-ul{
-    list-style: none;
-}
-li>a {
-    text-transform: uppercase;
-    font-weight:bold;
-    font-size: 1.2em;
-    color: black;
-}
-
-header > section {
-    flex-basis: 500px;
-    background-color: aquamarine;
-    padding: 5px 20px;
+nav {
+    background-color: red;
+    color:white;
+    grid-area: nav;
 }
 
 .hero {
-    width: 100%;
-    height: 100%;
-    border: 1px solid black;
+    background-color: lightblue;
+    color:white;
+    grid-area: hero;
 }
+
 main {
-    height:500px;
-}
-main :is(header, section, footer, aside){
-    background-color: aquamarine;
-}
-
-main article {
-    flex: 2 1;
+    background-color: darkblue;
+    color:white;
+    grid-area: main;
 }
 
-article > header{
-    flex-grow: 1;
-    justify-content: center;
-}
-article > section{
-    flex-grow: 8;
-    justify-content: center;
-}
-article > footer{
-    flex-grow: 1;
-    justify-content: center;
+.image{
+    background-color: lightgreen;
+    grid-area: image;
 }
 
-h2 {
-    text-transform: uppercase;
+.extra {
+    background-color: green;
+    grid-area: extra;
 }
 
-article > :is(header, section, footer),
-aside{
-    padding: 5px 10px;
+.banner {
+    background-color: yellow;
+    grid-area: banner;
 }
 
-main aside {
-    flex: 1 2;
-    height: 50%;
+@media screen and (max-width: 768px) {
+    body{
+        grid-template-areas: 
+        "header header header header"
+        "hero hero hero hero"
+        "hero hero hero hero"
+        "hero hero hero hero"
+        "hero hero hero hero"
+        "nav main main main"
+        "nav main main main"
+        "nav main main main"
+        "nav main main main"
+        "nav banner banner banner"
+        "nav banner banner banner"
+        "nav extra extra image"
+        "nav extra extra image";
+    }
 }
 
-.circle {
-    width: 50px;
-    aspect-ratio: 1/1;
-    border-radius: 50%;
-    background-color: black;
+@media screen and (max-width: 600px) {
+    body{
+        grid-template-areas: 
+        "header"
+        "nav"
+        "hero"
+        "hero"
+        "hero"
+        "main"
+        "main"
+        "main"
+        "banner"
+        "banner"
+        "extra"
+        "extra"
+        "image"
+        "image";
+    }
 }
