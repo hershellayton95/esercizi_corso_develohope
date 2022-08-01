@@ -4,6 +4,7 @@
     box-sizing: border-box;
     font-family: sans-serif;
 }
+
 .flex {
     display: flex;
 }
@@ -59,7 +60,7 @@ aside > div:first-of-type {
     width: 100%;
     justify-content: space-between;
     align-items: center;
-    padding: 5px;
+    padding: 10px;
 }
 aside > div:nth-of-type(2){
     row-gap: 30px;
@@ -95,13 +96,14 @@ input[type="text"] + input[type="submit"] {
 
 @media screen and (max-width:600px){
     main{
+        height: 200vh;
         flex-direction: column-reverse;
     }
     section {
-        flex: 1 1 50vh;
+        flex: 1 1 100vh;
         padding: 30px 0px;
     }
     aside {
-        flex: 1 1 50vh;
+        flex: 1 1 100vh;
     }
 }
