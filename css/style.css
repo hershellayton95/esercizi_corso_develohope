@@ -1,109 +1,128 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
 }
-
-.flex {
-    display: flex;
-}
-
-.flex-col{
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-main{
+.wrapper {
+    width: 100vw;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
-section {
-    flex: 2 1;
-    background-color: #242834;
-    color: #fff;
-    row-gap: 50px;
+header {
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 5px;
+    background-color: lightgray;
 }
 
-section>div {
-    width: 70%;
-    row-gap: 10px;
+h1 {font-size: 1.6rem;}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+a:not(:last-child) {
+    margin-inline-end: 5px;
 }
 
-section p {
-    text-align: center;
-}
-
-input[type="submit"] {
-    all:unset;
-    width: 12rem;
-    aspect-ratio: 5/1;
-    background-color: lightgreen;
-    border-radius: 50px;
-}
-
-h1 {
-    text-transform: uppercase;
+main {
+    width: 100%;
+    height: calc(100% - 20px);
+    display: flex;
+    align-items: stretch;
 }
 
 aside {
-    flex: 1 2;
+    width: 15%;
+    background-color: gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top {
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.bottom {
+    display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    background-color: skyblue;
-    
 }
 
-aside > div:first-of-type {
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
+ul {
+    list-style-type: none;
 }
-aside > div:nth-of-type(2){
-    row-gap: 30px;
-    width: 100%;
+
+li:not(:last-child) {
+    margin-bottom: 5px;
 }
-aside > div:last-of-type {
-    width: 100%;
-    height: 60px;
-}
-.circle {
-    width: 50px;
-    background-color: #FF9C6C;
+
+.ph {
+    width: 100px;
     aspect-ratio: 1/1;
     border-radius: 50px;
+    background-color: white;
 }
 
-form {
-    row-gap: 20px;
-    width: 100%;
+
+section {
+    width: 85%;
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 }
 
-input[type="text"] {
-    border: none;
+article {
     width: 80%;
-    aspect-ratio: 7/1;
+    height: 40%;
+    background-color: white;
+    overflow: scroll;
 }
 
-input[type="text"] + input[type="submit"] {
-    border-radius: 0;
+.carosello {
     width: 80%;
-    aspect-ratio: 7/1;
+    height: 30%;
+    background-color: white;
+    overflow: scroll;
+    display: flex;
+    align-items: center;
+}
+
+.card {
+    height: 80%;
+    aspect-ratio: 1/1;
+    background-color: gray;
+}
+
+.card:not(:last-child) {
+    margin-right: 5px;
+}
+
+@media screen and (max-width:768px){
+    aside {
+        display: none;
+    }
+    section {
+        width: 100%;
+    }
 }
 
 @media screen and (max-width:600px){
-    main{
-        height: 200vh;
-        flex-direction: column-reverse;
-    }
-    section {
-        flex: 1 1 100vh;
-        padding: 30px 0px;
-    }
-    aside {
-        flex: 1 1 100vh;
+    nav {
+        display: none;
     }
 }
