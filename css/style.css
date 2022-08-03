@@ -19,6 +19,7 @@ header {
     align-items: center;
     padding-inline: 5px;
     background-color: lightgray;
+    flex-shrink: 1;
 }
 
 h1 {font-size: 1.6rem;}
@@ -33,9 +34,10 @@ a:not(:last-child) {
 
 main {
     width: 100%;
-    height: calc(100% - 20px);
+    height: calc(100% - 2rem);
     display: flex;
     align-items: stretch;
+    flex-shrink: 1;
 }
 
 aside {
