@@ -1,1 +1,37 @@
+/*variabili*/
+/*codice*/
+div {
+  border: 1px solid #ff0000;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+div h1 {
+  color: #00ff00;
+  text-decoration: underline;
+  text-decoration-color: #0000ff;
+}
+div section {
+  height: 75%;
+  display: grid;
+  padding: 25px;
+  grid-template-columns: repeat(4, 1fr);
+}
+div section article {
+  border: 1px solid #00ff00;
+  padding: 20px;
+  color: #ff0000;
+}
+div section article:nth-child(odd) {
+  color: #0000ff;
+}
+div section article p {
+  text-align: center;
+  font-size: 1.1em;
+}
+div section article p:nth-of-type(even) {
+  color: #ff0000;
+}
 
+/*# sourceMappingURL=style.css.map */
