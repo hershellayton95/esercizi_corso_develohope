@@ -6,6 +6,13 @@ $blue:#0000ff;
 
 
 /*codice*/
+
+@mixin article($color, $border-color, $fontsize:1rem) {
+    color:$color;
+    border: 1px solid $border-color;
+    font-size:$fontsize;
+}
+
 div {
     border: 1px solid $red;
     width: 100%;
@@ -20,26 +27,30 @@ div {
     }
 
     section {
+        width: 98%;
         height: 75%;
         display: grid;
         padding: 25px;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
         
         article {
-            border: 1px solid $green;
             padding: 20px;
-            color: $red;
             
             &:nth-child(odd){
-                    color: $blue;
+                @include article($blue, $green)
+                }
+            &:nth-child(even){
+                @include article($red, $green)
                 }
 
             p {
                 text-align: center;
-                font-size: 1.1em;
-                &:nth-of-type(even){
-                    color: $red;
-                }
+            }
+        }
+
+        &:last-of-type{
+            article {
+                @include article($green, $blue, 24px)
             }
         }
     }
