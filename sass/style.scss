@@ -1,57 +1,16 @@
-/*variabili*/
+@mixin bounce($start:0, $stop:200px) {
+    animation-duration: 1s;
+    animation-name: bounce;
 
-$red:#ff0000;
-$green:#00ff00;
-$blue:#0000ff;
-
-
-/*codice*/
-
-@mixin article($color, $border-color, $fontsize:1rem) {
-    color:$color;
-    border: 1px solid $border-color;
-    font-size:$fontsize;
+    @keyframes bounce {
+        from {transform: translateY($start);}
+        to {transform: translateY($stop)}
+    }
 }
 
-div {
-    border: 1px solid $red;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    h1{
-        color: $green;
-        text-decoration:underline;
-        text-decoration-color: $blue;
-    }
-
-    section {
-        width: 98%;
-        height: 75%;
-        display: grid;
-        padding: 25px;
-        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-        
-        article {
-            padding: 20px;
-            
-            &:nth-child(odd){
-                @include article($blue, $green)
-                }
-            &:nth-child(even){
-                @include article($red, $green)
-                }
-
-            p {
-                text-align: center;
-            }
-        }
-
-        &:last-of-type{
-            article {
-                @include article($green, $blue, 24px)
-            }
-        }
-    }
+.bounce {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    @include bounce;
 }

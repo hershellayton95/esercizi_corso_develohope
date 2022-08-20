@@ -1,44 +1,17 @@
-/*variabili*/
-/*codice*/
-div {
-  border: 1px solid #ff0000;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.bounce {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  animation-duration: 1s;
+  animation-name: bounce;
 }
-div h1 {
-  color: #00ff00;
-  text-decoration: underline;
-  text-decoration-color: #0000ff;
-}
-div section {
-  width: 98%;
-  height: 75%;
-  display: grid;
-  padding: 25px;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-}
-div section article {
-  padding: 20px;
-}
-div section article:nth-child(odd) {
-  color: #0000ff;
-  border: 1px solid #00ff00;
-  font-size: 1rem;
-}
-div section article:nth-child(even) {
-  color: #ff0000;
-  border: 1px solid #00ff00;
-  font-size: 1rem;
-}
-div section article p {
-  text-align: center;
-}
-div section:last-of-type article {
-  color: #00ff00;
-  border: 1px solid #0000ff;
-  font-size: 24px;
+@keyframes bounce {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(200px);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
