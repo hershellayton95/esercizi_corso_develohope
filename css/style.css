@@ -6,10 +6,20 @@
   animation-name: bounce;
 }
 @keyframes bounce {
-  from {
+  /*from -to or %*/
+  0% {
     transform: translateY(0);
   }
-  to {
+  25% {
+    transform: translateY(50px);
+  }
+  50% {
+    transform: translateY(100px);
+  }
+  75% {
+    transform: translateY(150px);
+  }
+  100% {
     transform: translateY(200px);
   }
 }

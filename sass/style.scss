@@ -3,8 +3,12 @@
     animation-name: bounce;
 
     @keyframes bounce {
-        from {transform: translateY($start);}
-        to {transform: translateY($stop)}
+        /*from -to or %*/
+        0% {transform: translateY($start);}
+        25% {transform: translateY(calc($stop/4));}
+        50% {transform: translateY(calc($stop/2));}
+        75% {transform: translateY(calc($stop * 3 / 4));}
+        100% {transform: translateY($stop)}
     }
 }
 
