@@ -1,20 +1,55 @@
-@mixin bounce($start:0, $stop:200px) {
-    animation-duration: 1s;
-    animation-name: bounce;
+/*variabili*/
 
-    @keyframes bounce {
-        /*from -to or %*/
-        0% {transform: translateY($start);}
-        25% {transform: translateY(calc($stop/4));}
-        50% {transform: translateY(calc($stop/2));}
-        75% {transform: translateY(calc($stop * 3 / 4));}
-        100% {transform: translateY($stop)}
-    }
+@use "variables" as *;
+@use "functions" as *;
+
+/*codice*/
+
+@mixin article($color, $border-color, $fontsize:1rem) {
+    color:$color;
+    border: pxtorem(1) solid $border-color;
+    font-size:$fontsize;
 }
 
-.bounce {
-    width: 100px;
-    height: 100px;
-    background-color: red;
-    @include bounce;
+div {
+    border: pxtorem(1) solid $red;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1{
+        color: $green;
+        text-decoration:underline;
+        text-decoration-color: $blue;
+    }
+
+    section {
+        width: 98%;
+        height: 75%;
+        display: grid;
+        padding: pxtorem(25);
+        grid-template-columns: repeat(auto-fit, minmax(pxtorem(400), 1fr));
+        
+        article {
+            padding: pxtorem(20);
+            
+            &:nth-child(odd){
+                @include article($blue, $green)
+                }
+            &:nth-child(even){
+                @include article($red, $green)
+                }
+
+            p {
+                text-align: center;
+            }
+        }
+
+        &:last-of-type{
+            article {
+                @include article($green, $blue, pxtorem(24))
+            }
+        }
+    }
 }

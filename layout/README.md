@@ -1,18 +1,6 @@
-Vogliamo applicare una classe che permetta l'animazione dell'elemento, l'effetto dovrà fare "saltellare" l'elemento html.
-La classe si chiamerà .bounce ed avrà una durata di animazione di 1s.
+Modificare il codice dell'esercizio 2 creando un modulo per tutte le variabili dichiarate.
+Creare poi un modulo con una funzione che trasformi i px in rem, quindi che accetti come parametro un numero e restituisca il valore relativo in rem.
+Consideriamo che 1rem = 16px.
+Tale funzione dovrà essere applicata nel foglio principale in modo che l'unica unità di misura sia il rem.
 
-Tramite mixin dovremmo creare una animazione di nome "bounce".
 
-Nella mixin dovremmo parametrizzare la partenza della traslazione e la distanza con cui l'elemento dovrà traslare sull'asse Y nei vari frames.
-
-Dunque la mixin avrà 2 valori di default nei parametri:
-- partenza traslazione
-- distanza traslazione
-
-Come possiamo vedere nell'esempio che segue abbiamo intercettato che si parte da 0 e si arriva a massimo -30px (quando si trova al 40% dell'animazione)
-Nel momento in cui si è al 60% bisogna assegnare la metà della distanza di traslazione parametrizzata.
-Ad esempio se al 40% abbiamo -30px al 60% dovremmo avere -30px/2
-
-Esempio: @keyframes bounce { /* animazione / 0%, 20%, 50%, 80%, 100% {transform: translateY(0);} / 0 rappresenta il valore di partenza / 40% {transform: translateY(-30px);} / -30px rappresenta il valore al 40% dell'animazione / 60% {transform: translateY(-15px);} / -15px rappresenta il valore al 60% dell'animazione */ }
-
-.bounce { /* classe con animazione correlata */ animation-duration: 1s; animation-name: bounce; }

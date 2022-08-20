@@ -1,27 +1,44 @@
-.bounce {
-  width: 100px;
-  height: 100px;
-  background-color: red;
-  animation-duration: 1s;
-  animation-name: bounce;
+/*variabili*/
+/*codice*/
+div {
+  border: 0.0625rem solid #ff0000;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-@keyframes bounce {
-  /*from -to or %*/
-  0% {
-    transform: translateY(0);
-  }
-  25% {
-    transform: translateY(50px);
-  }
-  50% {
-    transform: translateY(100px);
-  }
-  75% {
-    transform: translateY(150px);
-  }
-  100% {
-    transform: translateY(200px);
-  }
+div h1 {
+  color: #00ff00;
+  text-decoration: underline;
+  text-decoration-color: #0000ff;
+}
+div section {
+  width: 98%;
+  height: 75%;
+  display: grid;
+  padding: 1.5625rem;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+}
+div section article {
+  padding: 1.25rem;
+}
+div section article:nth-child(odd) {
+  color: #0000ff;
+  border: 0.0625rem solid #00ff00;
+  font-size: 1rem;
+}
+div section article:nth-child(even) {
+  color: #ff0000;
+  border: 0.0625rem solid #00ff00;
+  font-size: 1rem;
+}
+div section article p {
+  text-align: center;
+}
+div section:last-of-type article {
+  color: #00ff00;
+  border: 0.0625rem solid #0000ff;
+  font-size: 1.5rem;
 }
 
 /*# sourceMappingURL=style.css.map */
