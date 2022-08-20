@@ -118,10 +118,22 @@ article > footer > div {
     header > div {
         display: block;
     }
+
+    main > article {
+        height: 50%;
+    }
 }
 
 @media screen and (max-width:600px) {
     header > section:last-of-type > div {
         display: none;
+    }
+
+    main {
+        align-items: flex-start !important;
+    }
+
+    main > article {
+        height: 30%;
     }
 }
