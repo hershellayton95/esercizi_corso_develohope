@@ -13,11 +13,13 @@
             $hex_val: $hex_val - 10 + 1;
 
             $val_list: "A", "B", "C", "D", "E", "F";
+
+            //pesco dalla lista
             $hex_val: nth($val_list, $hex_val);
             }
         //appendo il valore randomico, eventualmente convertito, alla variabile $hex
         $hex: $hex + "#{$hex_val}"
     }
-    @return "#{$hex}";
+    @return #{$hex};
 }
 

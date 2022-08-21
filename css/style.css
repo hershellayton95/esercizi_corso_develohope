@@ -1,5 +1,7 @@
-div::after {
-  content: "#F46104";
+html {
+  width: 100vw;
+  height: 100vh;
+  background-color: #989653;
 }
 
 /*# sourceMappingURL=style.css.map */

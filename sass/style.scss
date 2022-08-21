@@ -1,7 +1,7 @@
 @use "functions";
 
-div {
-    &::after{
-        content: functions.random-hex();
-    }
+html {
+    width: 100vw;
+    height: 100vh;
+    background-color: functions.random-hex();
 }
