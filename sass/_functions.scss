@@ -1,3 +1,23 @@
-@function pxtorem($variable){
-    @return #{calc($variable/16)}rem;
+@function random-hex(){
+    //inizializzo con #
+    $hex:"#";
+
+    //creo un ciclo for per ciclare 6 volte il random
+    @for $i from 0 to 6 {
+        //inizializzo una variabile con la funzione random e tolgo 1 per creare valoori pari a 0. il valore 15 mi servirà più avanti in quanto dovrò aggiungere +1 per la funzione della lista nth
+       $hex_val:random(16)-1;
+
+       // se il valore per pari e maggiore a 10, devo convertire il valore in valore alfabetico
+        @if ($hex_val>9){
+            // per estrarre dalla liste, dato che è composta da 6 elementi, devo sottrarre al valore random 10 e aggiungere 1 perché i voalori 0 non sono parametri accettati dalla funzione nth
+            $hex_val: $hex_val - 10 + 1;
+
+            $val_list: "A", "B", "C", "D", "E", "F";
+            $hex_val: nth($val_list, $hex_val);
+            }
+        //appendo il valore randomico, eventualmente convertito, alla variabile $hex
+        $hex: $hex + "#{$hex_val}"
+    }
+    @return "#{$hex}";
 }
+

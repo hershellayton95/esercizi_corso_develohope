@@ -1,44 +1,5 @@
-/*variabili*/
-/*codice*/
-div {
-  border: 0.0625rem solid #ff0000;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-div h1 {
-  color: #00ff00;
-  text-decoration: underline;
-  text-decoration-color: #0000ff;
-}
-div section {
-  width: 98%;
-  height: 75%;
-  display: grid;
-  padding: 1.5625rem;
-  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-}
-div section article {
-  padding: 1.25rem;
-}
-div section article:nth-child(odd) {
-  color: #0000ff;
-  border: 0.0625rem solid #00ff00;
-  font-size: 1rem;
-}
-div section article:nth-child(even) {
-  color: #ff0000;
-  border: 0.0625rem solid #00ff00;
-  font-size: 1rem;
-}
-div section article p {
-  text-align: center;
-}
-div section:last-of-type article {
-  color: #00ff00;
-  border: 0.0625rem solid #0000ff;
-  font-size: 1.5rem;
+div::after {
+  content: "#F46104";
 }
 
 /*# sourceMappingURL=style.css.map */

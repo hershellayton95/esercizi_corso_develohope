@@ -1,6 +1,7 @@
-Modificare il codice dell'esercizio 2 creando un modulo per tutte le variabili dichiarate.
-Creare poi un modulo con una funzione che trasformi i px in rem, quindi che accetti come parametro un numero e restituisca il valore relativo in rem.
-Consideriamo che 1rem = 16px.
-Tale funzione dovrà essere applicata nel foglio principale in modo che l'unica unità di misura sia il rem.
+Tramite una funzione creare un generatore di colori randomici in formato esadecimale.
 
+La funzione si chiamerà random-hex() e dovrà ritornare una stringa del tipo: "#AA11FF"
 
+Facendo dunque affidamento alla funzione nativa random() possiamo generare dei valori randomici, dovremmo poi controllare con un if se il valore è > di 9 per apporre le lettere da A ad F
+
+Tramite il comando @return possiamo ritornare il valore generato dalla funzione.

@@ -1,55 +1,7 @@
-/*variabili*/
-
-@use "variables" as *;
-@use "functions" as *;
-
-/*codice*/
-
-@mixin article($color, $border-color, $fontsize:1rem) {
-    color:$color;
-    border: pxtorem(1) solid $border-color;
-    font-size:$fontsize;
-}
+@use "functions";
 
 div {
-    border: pxtorem(1) solid $red;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    h1{
-        color: $green;
-        text-decoration:underline;
-        text-decoration-color: $blue;
-    }
-
-    section {
-        width: 98%;
-        height: 75%;
-        display: grid;
-        padding: pxtorem(25);
-        grid-template-columns: repeat(auto-fit, minmax(pxtorem(400), 1fr));
-        
-        article {
-            padding: pxtorem(20);
-            
-            &:nth-child(odd){
-                @include article($blue, $green)
-                }
-            &:nth-child(even){
-                @include article($red, $green)
-                }
-
-            p {
-                text-align: center;
-            }
-        }
-
-        &:last-of-type{
-            article {
-                @include article($green, $blue, pxtorem(24))
-            }
-        }
+    &::after{
+        content: functions.random-hex();
     }
 }
