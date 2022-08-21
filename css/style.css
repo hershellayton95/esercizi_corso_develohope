@@ -1,16 +1,17 @@
 /*variabili*/
 /*codice*/
 div {
-  border: 1px solid #ff0000;
+  border: 1px solid red;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 div h1 {
-  color: #00ff00;
+  color: green;
   text-decoration: underline;
-  text-decoration-color: #0000ff;
+  -webkit-text-decoration-color: blue;
+          text-decoration-color: blue;
 }
 div section {
   height: 75%;
@@ -19,19 +20,17 @@ div section {
   grid-template-columns: repeat(4, 1fr);
 }
 div section article {
-  border: 1px solid #00ff00;
+  border: 1px solid green;
   padding: 20px;
-  color: #ff0000;
+  color: red;
 }
 div section article:nth-child(odd) {
-  color: #0000ff;
+  color: blue;
 }
 div section article p {
   text-align: center;
   font-size: 1.1em;
 }
 div section article p:nth-of-type(even) {
-  color: #ff0000;
-}
-
-/*# sourceMappingURL=style.css.map */
+  color: red;
+}/*# sourceMappingURL=style.css.map */
