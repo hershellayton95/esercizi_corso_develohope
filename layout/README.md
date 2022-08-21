@@ -1,6 +1,3 @@
-Modificare il codice dell'esercizio 2 creando un modulo per tutte le variabili dichiarate.
-Creare poi un modulo con una funzione che trasformi i px in rem, quindi che accetti come parametro un numero e restituisca il valore relativo in rem.
-Consideriamo che 1rem = 16px.
-Tale funzione dovrà essere applicata nel foglio principale in modo che l'unica unità di misura sia il rem.
-
-
+Modificare il codice dell'esercizio 3 utilizzando il parent selector '&' per le classi annidate.
+Stilizzare l'h2 che avrà le stesse regole di h1 con in più in padding di 1rem e un borso rosso.
+Per stilizzare l'h1 e l'h2 utilizare il metodo extend.

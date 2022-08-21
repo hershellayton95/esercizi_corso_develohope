@@ -1,17 +1,22 @@
 /*variabili*/
 /*codice*/
+div :where(h1, h2) {
+  color: green;
+  text-decoration: underline;
+  -webkit-text-decoration-color: blue;
+          text-decoration-color: blue;
+}
+
 div {
-  border: 0.0625rem solid #ff0000;
+  border: 0.0625rem solid red;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-div h1 {
-  color: #00ff00;
-  text-decoration: underline;
-  -webkit-text-decoration-color: #0000ff;
-          text-decoration-color: #0000ff;
+div h2 {
+  padding: 1rem;
+  border: 0.0625rem solid red;
 }
 div section {
   width: 98%;
@@ -24,20 +29,20 @@ div section article {
   padding: 1.25rem;
 }
 div section article:nth-child(odd) {
-  color: #0000ff;
-  border: 0.0625rem solid #00ff00;
+  color: blue;
+  border: 0.0625rem solid green;
   font-size: 1rem;
 }
 div section article:nth-child(even) {
-  color: #ff0000;
-  border: 0.0625rem solid #00ff00;
+  color: red;
+  border: 0.0625rem solid green;
   font-size: 1rem;
 }
 div section article p {
   text-align: center;
 }
 div section:last-of-type article {
-  color: #00ff00;
-  border: 0.0625rem solid #0000ff;
+  color: green;
+  border: 0.0625rem solid blue;
   font-size: 1.5rem;
 }/*# sourceMappingURL=style.css.map */
