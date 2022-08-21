@@ -10,7 +10,8 @@ div {
 div h1 {
   color: #00ff00;
   text-decoration: underline;
-  text-decoration-color: #0000ff;
+  -webkit-text-decoration-color: #0000ff;
+          text-decoration-color: #0000ff;
 }
 div section {
   width: 98%;
@@ -39,6 +40,4 @@ div section:last-of-type article {
   color: #00ff00;
   border: 0.0625rem solid #0000ff;
   font-size: 1.5rem;
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
