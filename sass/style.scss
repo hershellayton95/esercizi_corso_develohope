@@ -77,19 +77,31 @@ body > div {
                 font-size: $var;
             }
         }
-        
+        /*vecchia versione */
+        // @for $var from 1 to 20 {
+        //     $red_rgb:calc(255*calc(1 - calc(calc($var - 1) / 18)));
+        //     $blue_rgb:calc(255*calc(1 - calc(calc($var - 1) / 18)));
+        //     $green_rgb:calc(255*calc(1 - calc(calc($var - 1) / 18)));
+        //     $white_rgb: rgb($red_rgb, $blue_rgb, $green_rgb);
+        //     @if ($var == 10){
+        //         $white_rgb: blue;
+        //     }
+        //     & > div:nth-child(#{$var}){
+        //         @if ($var != 10){
+        //             background-color: $white_rgb;
+        //             color: invert($white_rgb);
+        //         } @else {
+        //             background-color: $blue;
+        //             color: $red;
+        //         }
+        //     }
+        // }
         @for $var from 1 to 20 {
-            $red_rgb:calc(255*calc(1 - calc(calc($var - 1) / 18)));
-            $blue_rgb:calc(255*calc(1 - calc(calc($var - 1) / 18)));
-            $green_rgb:calc(255*calc(1 - calc(calc($var - 1) / 18)));
-            $white_rgb: rgb($red_rgb, $blue_rgb, $green_rgb);
-            @if ($var == 10){
-                $white_rgb: blue;
-            }
+            $percentage: calc(($var - 1) /18 * 100);
             & > div:nth-child(#{$var}){
                 @if ($var != 10){
-                    background-color: $white_rgb;
-                    color: invert($white_rgb);
+                    background-color: darken(#FFFFFF, $percentage) ;
+                    color:lighten(#000000, $percentage);
                 } @else {
                     background-color: $blue;
                     color: $red;

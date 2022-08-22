@@ -49,6 +49,7 @@ body > div section:last-of-type article {
 body > div section:nth-of-type(2) {
   display: flex;
   justify-content: space-between;
+  /*vecchia versione */
 }
 body > div section:nth-of-type(2) div {
   width: 2.8125rem;
@@ -65,39 +66,39 @@ body > div section:nth-of-type(2) .fs-3rem {
   font-size: 3rem;
 }
 body > div section:nth-of-type(2) > div:nth-child(1) {
-  background-color: rgb(255, 255, 255);
+  background-color: white;
   color: black;
 }
 body > div section:nth-of-type(2) > div:nth-child(2) {
-  background-color: rgb(241, 241, 241);
+  background-color: #f1f1f1;
   color: #0e0e0e;
 }
 body > div section:nth-of-type(2) > div:nth-child(3) {
-  background-color: rgb(227, 227, 227);
+  background-color: #e3e3e3;
   color: #1c1c1c;
 }
 body > div section:nth-of-type(2) > div:nth-child(4) {
-  background-color: rgb(213, 213, 213);
-  color: #2a2a2a;
+  background-color: #d5d5d5;
+  color: #2b2b2b;
 }
 body > div section:nth-of-type(2) > div:nth-child(5) {
-  background-color: rgb(198, 198, 198);
+  background-color: #c6c6c6;
   color: #393939;
 }
 body > div section:nth-of-type(2) > div:nth-child(6) {
-  background-color: rgb(184, 184, 184);
+  background-color: #b8b8b8;
   color: #474747;
 }
 body > div section:nth-of-type(2) > div:nth-child(7) {
-  background-color: rgb(170, 170, 170);
+  background-color: #aaaaaa;
   color: #555555;
 }
 body > div section:nth-of-type(2) > div:nth-child(8) {
-  background-color: rgb(156, 156, 156);
+  background-color: #9c9c9c;
   color: #636363;
 }
 body > div section:nth-of-type(2) > div:nth-child(9) {
-  background-color: rgb(142, 142, 142);
+  background-color: #8e8e8e;
   color: #717171;
 }
 body > div section:nth-of-type(2) > div:nth-child(10) {
@@ -105,38 +106,38 @@ body > div section:nth-of-type(2) > div:nth-child(10) {
   color: red;
 }
 body > div section:nth-of-type(2) > div:nth-child(11) {
-  background-color: rgb(113, 113, 113);
+  background-color: #717171;
   color: #8e8e8e;
 }
 body > div section:nth-of-type(2) > div:nth-child(12) {
-  background-color: rgb(99, 99, 99);
+  background-color: #636363;
   color: #9c9c9c;
 }
 body > div section:nth-of-type(2) > div:nth-child(13) {
-  background-color: rgb(85, 85, 85);
+  background-color: #555555;
   color: #aaaaaa;
 }
 body > div section:nth-of-type(2) > div:nth-child(14) {
-  background-color: rgb(71, 71, 71);
+  background-color: #474747;
   color: #b8b8b8;
 }
 body > div section:nth-of-type(2) > div:nth-child(15) {
-  background-color: rgb(57, 57, 57);
+  background-color: #393939;
   color: #c6c6c6;
 }
 body > div section:nth-of-type(2) > div:nth-child(16) {
-  background-color: rgb(43, 43, 43);
-  color: #d4d4d4;
+  background-color: #2b2b2b;
+  color: #d5d5d5;
 }
 body > div section:nth-of-type(2) > div:nth-child(17) {
-  background-color: rgb(28, 28, 28);
+  background-color: #1c1c1c;
   color: #e3e3e3;
 }
 body > div section:nth-of-type(2) > div:nth-child(18) {
-  background-color: rgb(14, 14, 14);
+  background-color: #0e0e0e;
   color: #f1f1f1;
 }
 body > div section:nth-of-type(2) > div:nth-child(19) {
-  background-color: rgb(0, 0, 0);
+  background-color: black;
   color: white;
 }/*# sourceMappingURL=style.css.map */
