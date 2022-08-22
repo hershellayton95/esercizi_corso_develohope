@@ -1,7 +1,28 @@
 @use "functions";
 
-html {
-    width: 100vw;
-    height: 100vh;
+
+@mixin bounce($start:0, $stop:200px) {
+    animation-duration: 1s;
+    animation-name: bounce;
+    
+    @keyframes bounce {
+        /*from -to or %*/
+        0% {transform: translateY($start);}
+        25% {transform: translateY(calc($stop/4));}
+        50% {transform: translateY(calc($stop/2));}
+        75% {transform: translateY(calc($stop * 3 / 4));}
+        100% {transform: translateY($stop)}
+    }
+}
+
+.bg-random {
     background-color: functions.random-hex();
+}
+
+.bounce {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    @include bounce;
+    @extend .bg-random;
 }

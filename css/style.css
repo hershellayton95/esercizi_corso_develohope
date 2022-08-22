@@ -1,7 +1,49 @@
-html {
-  width: 100vw;
-  height: 100vh;
-  background-color: #989653;
+.bg-random, .bounce {
+  background-color: #F54691;
 }
 
-/*# sourceMappingURL=style.css.map */
+.bounce {
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-name: bounce;
+          animation-name: bounce;
+}
+@-webkit-keyframes bounce {
+  /*from -to or %*/
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(50px);
+  }
+  50% {
+    transform: translateY(100px);
+  }
+  75% {
+    transform: translateY(150px);
+  }
+  100% {
+    transform: translateY(200px);
+  }
+}
+@keyframes bounce {
+  /*from -to or %*/
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(50px);
+  }
+  50% {
+    transform: translateY(100px);
+  }
+  75% {
+    transform: translateY(150px);
+  }
+  100% {
+    transform: translateY(200px);
+  }
+}/*# sourceMappingURL=style.css.map */

@@ -1,7 +1,5 @@
-Tramite una funzione creare un generatore di colori randomici in formato esadecimale.
+Creare una nuova classe .bg-random che avrà un brackground generato randomicamente tramite la funzione random-hex().
 
-La funzione si chiamerà random-hex() e dovrà ritornare una stringa del tipo: "#AA11FF"
+Estendere la classe .bounce dell'esercizio precedente assegnandogli un colore randomico grazie alla classe .bg-random.
 
-Facendo dunque affidamento alla funzione nativa random() possiamo generare dei valori randomici, dovremmo poi controllare con un if se il valore è > di 9 per apporre le lettere da A ad F
-
-Tramite il comando @return possiamo ritornare il valore generato dalla funzione.
+Assegnare la classe .bounce ad un div con forma rotonda e posizionarlo all'interno del foglio html a piacimento.
