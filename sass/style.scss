@@ -97,7 +97,7 @@ body > div {
         //     }
         // }
         @for $var from 1 to 20 {
-            $percentage: calc(($var - 1) /18 * 100);
+            $percentage: percentage(calc(($var - 1) /18));
             & > div:nth-child(#{$var}){
                 @if ($var != 10){
                     background-color: darken(#FFFFFF, $percentage) ;
