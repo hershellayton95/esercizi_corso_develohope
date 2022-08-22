@@ -5,7 +5,7 @@
     @for $i from 0 to 6 {
         $hex_val:random(length($val_list));
         $hex_val: nth($val_list, $hex_val);
-        $hex: $hex + #{$hex_val}
+        $hex: $hex + #{$hex_val};
     }
 
     @return #{$hex};
