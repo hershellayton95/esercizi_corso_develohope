@@ -1,13 +1,10 @@
-function canPlay() {
-    const personName = 'Paul';
-  
-    if (true) {
-      personName = 'George'; // Argh! Voglio che personName sia una variabile di sola lettura
-    }
-  
-    personName += ' plays football';
-  
-    console.log(personName);
-  }
-  
-  canPlay();
+const students = ['Paul', 'George', 'Lucas'];
+
+function addStudent(student) {
+  students.push(student);
+}
+
+addStudent('Marco');
+console.log(students);
+
+/*in realtà const non sta ad indicare che sia una "readonly", ma solo che non possiamo riassegnare quella variabile (quindi possiamo manipolarla)*/
