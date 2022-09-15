@@ -1,23 +1,13 @@
-function getKeys(obj) {
-    
-    const keys = [];
+function sumUntil(maxValue) {
 
-    for (const key in obj) {
-        if (Object.hasOwnProperty.call(obj, key)) {
-            keys.push(key);
-        }
+    let sum = 0;
+    let i = 0;
+    for (;i <= maxValue;){
+        sum += i;
+        i++
     }
-    
-    return keys;
+
+    return sum;
   }
   
-  const person = {
-    firstName: 'John',
-    lastName: 'Doe',
-    age: 32,
-    city: 'Rome',
-    job: 'Developer',
-  };
-  
-  const keys = getKeys(person);
-  console.log(keys);
+  console.log(sumUntil(5));
