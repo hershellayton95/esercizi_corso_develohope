@@ -1,12 +1,17 @@
-const sum = (a, b) => { return a + b };
-
-const subtract = (a, b) => { return a - b };
-
-const multiply = (a, b) => { return a * b };
-
-const divide = (a, b) => { return a / b };
-
-const log = (value) => { console.log(value) };
-
-
-log(divide(subtract(multiply(sum(2,4),sum(5,2)),2),5));
+function greet(greeting) {
+    return (name) => greeting + " " + name;
+  }
+  
+  const greetWithHello = greet('Hello');
+  const greetWithBye = greet('Bye');
+  const greetWithHi = greet('Hi');
+  
+  const greetPaulWithHello = greetWithHello('Paul');
+  const greetPaulWithHi = greetWithHi('Paul');
+  const greetJohnWithBye = greetWithBye('John');
+  const greetSimonWithHello = greetWithHello('Simon');
+  
+  console.log(greetPaulWithHello);
+  console.log(greetPaulWithHi);
+  console.log(greetJohnWithBye);
+  console.log(greetSimonWithHello);
