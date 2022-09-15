@@ -1,35 +1,32 @@
-function adultFilter(persons) {
-  // const adults = []
+function nicknameMap(persons) {
+    const nicknames = [];
 
-/* ciclo for */    
-//     for (let i = 0; i < persons.length; i++) {  
-//         if (persons[i].age >= 18){
-//             adults.push(persons[i]);
-//         } 
-//     }
+    /*VOLEVO PROVARE ALTRI CICLI*/
 
-/* ciclo while */ 
-//     let i = 0;
-//     while (persons[i]) {
-        
-//         if (persons[i].age >= 18){
-//             adults.push(persons[i]);
-//         } 
+    // /* for..of*/
+    // for (const person of persons) {
+    //     nicknames.push(`${person.name}-${person.age}`);
+    // }
 
-//         i++
-//     }
+    /* for..in*/
+    //for (const index in persons) {
+    //nicknames.push(`${persons[index].name}-${persons[index].age}`);
+    // }
 
-    // const adults = persons.filter(item => item.age >= 18);
+    /* forEach*/
 
-    const adults = persons.find(item => item.age >= 18);
-    
-    
-    return adults;
+        persons.forEach(element => {
+            nicknames.push(
+                `${element.name}-${element.age}`
+            );
+        });
+
+    return nicknames;
 }
 
 
-  
-  const persons = [
+
+const persons = [
     { name: 'Paul', age: 16 },
     { name: 'George', age: 17 },
     { name: 'Lucas', age: 21 },
@@ -40,8 +37,8 @@ function adultFilter(persons) {
     { name: 'Mark', age: 15 },
     { name: 'Sandra', age: 34 },
     { name: 'Alice', age: 28 }
-  ];
-  
-  const adults = adultFilter(persons);
-  console.log(persons);
-  console.log(adults);
+];
+
+const nicknames = nicknameMap(persons);
+console.log(persons);
+console.log(nicknames);
