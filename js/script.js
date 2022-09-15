@@ -1,30 +1,19 @@
-function nicknameMap(persons) {
-    const nicknames = [];
+function calculateAverageAge(persons) {
 
-    /*VOLEVO PROVARE ALTRI CICLI*/
+    /* do-while*/
+    let mean_num = 0;
+    const mean_den = persons.length;
+    let i = 0;
 
-    // /* for..of*/
-    // for (const person of persons) {
-    //     nicknames.push(`${person.name}-${person.age}`);
-    // }
+    do {
+        mean_num += persons[i].age;
+        i++;
+    } while (persons[i]);
 
-    /* for..in*/
-    //for (const index in persons) {
-    //nicknames.push(`${persons[index].name}-${persons[index].age}`);
-    // }
+    const mean = mean_num / mean_den;
 
-    /* forEach*/
-
-        persons.forEach(element => {
-            nicknames.push(
-                `${element.name}-${element.age}`
-            );
-        });
-
-    return nicknames;
+    return mean;
 }
-
-
 
 const persons = [
     { name: 'Paul', age: 16 },
@@ -39,6 +28,6 @@ const persons = [
     { name: 'Alice', age: 28 }
 ];
 
-const nicknames = nicknameMap(persons);
+const averageAge = calculateAverageAge(persons);
 console.log(persons);
-console.log(nicknames);
+console.log(averageAge);
