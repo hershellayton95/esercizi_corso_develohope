@@ -1,13 +1,5 @@
-function sumUntil(maxValue) {
-
-    let sum = 0;
-    let i = 0;
-    for (;i <= maxValue;){
-        sum += i;
-        i++
-    }
-
-    return sum;
-  }
+const sum = (a, b) => { return a + b;}
   
-  console.log(sumUntil(5));
+const log = value => {console.log(value);}
+  
+log(sum(2, 5));
