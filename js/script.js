@@ -1,3 +1,12 @@
-const concat = (arr1, arr2) => { return arr1.concat(arr2) };
+const sum = (a, b) => { return a + b };
 
-console.log(concat([2, 4], [5, 1]));
+const subtract = (a, b) => { return a - b };
+
+const multiply = (a, b) => { return a * b };
+
+const divide = (a, b) => { return a / b };
+
+const log = (value) => { console.log(value) };
+
+
+log(divide(subtract(multiply(sum(2,4),sum(5,2)),2),5));
