@@ -1,5 +1,5 @@
 function adultFilter(persons) {
-    const adults = []
+  // const adults = []
 
 /* ciclo for */    
 //     for (let i = 0; i < persons.length; i++) {  
@@ -9,16 +9,21 @@ function adultFilter(persons) {
 //     }
 
 /* ciclo while */ 
-    let i = 0;
-    while (persons[i]) {
+//     let i = 0;
+//     while (persons[i]) {
         
-        if (persons[i].age >= 18){
-            adults.push(persons[i]);
-        } 
+//         if (persons[i].age >= 18){
+//             adults.push(persons[i]);
+//         } 
 
-        i++
-    }
+//         i++
+//     }
 
+    // const adults = persons.filter(item => item.age >= 18);
+
+    const adults = persons.find(item => item.age >= 18);
+    
+    
     return adults;
 }
 
