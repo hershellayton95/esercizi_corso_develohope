@@ -1,17 +1,20 @@
-function greet(greeting) {
-    return (name) => greeting + " " + name;
+function pow(base) {
+
+    /* come arrow funzione */
+    return (number) => {return number**base};
+    /* come arrow procedura?  */
+    // return (number) => number**base;
   }
   
-  const greetWithHello = greet('Hello');
-  const greetWithBye = greet('Bye');
-  const greetWithHi = greet('Hi');
+  const pow2 = pow(2);
+  const pow5 = pow(5);
   
-  const greetPaulWithHello = greetWithHello('Paul');
-  const greetPaulWithHi = greetWithHi('Paul');
-  const greetJohnWithBye = greetWithBye('John');
-  const greetSimonWithHello = greetWithHello('Simon');
+  console.log('--- Power of 2 ---');
+  console.log(pow2(4));
+  console.log(pow2(2));
+  console.log(pow2(8));
   
-  console.log(greetPaulWithHello);
-  console.log(greetPaulWithHi);
-  console.log(greetJohnWithBye);
-  console.log(greetSimonWithHello);
+  console.log('--- Power of 5 ---');
+  console.log(pow5(4));
+  console.log(pow5(2));
+  console.log(pow5(8));
