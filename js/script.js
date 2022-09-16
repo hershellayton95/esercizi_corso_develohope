@@ -1,20 +1,20 @@
-function pow(base) {
-
-    /* come arrow funzione */
-    return (number) => {return number**base};
-    /* come arrow procedura?  */
-    // return (number) => number**base;
+function createStore() {
+  const store = [];
+  return function (things) {
+    store.push(things);
+    console.log(store);
   }
-  
-  const pow2 = pow(2);
-  const pow5 = pow(5);
-  
-  console.log('--- Power of 2 ---');
-  console.log(pow2(4));
-  console.log(pow2(2));
-  console.log(pow2(8));
-  
-  console.log('--- Power of 5 ---');
-  console.log(pow5(4));
-  console.log(pow5(2));
-  console.log(pow5(8));
+}
+
+const redPants = { id: 1, name: 'Red Pants' };
+const whiteHat = { id: 2, name: 'White Hat' };
+const blackSneakers = { id: 3, name: 'Black Sneakers' };
+
+console.log('--- Dress Store ---');
+const dressStore = createStore();
+dressStore(redPants);
+dressStore(whiteHat)
+
+console.log('--- Shoes Store ---');
+const shoesStore = createStore();
+shoesStore(blackSneakers);
