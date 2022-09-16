@@ -1,20 +1,31 @@
-function createStore() {
-  const store = [];
-  return function (things) {
-    store.push(things);
-    console.log(store);
-  }
+function calculate() {
+  const calculator = {
+
+    startNumber: 0,
+    
+    add(n) {
+      this.startNumber = this.startNumber + n;
+      return this;
+    },
+    sub(n) {
+      this.startNumber = this.startNumber - n
+      return this;
+    },
+    multiply(n) {
+      this.startNumber = this.startNumber * n
+      return this;
+    },
+    divide(n) {
+      this.startNumber = this.startNumber / n
+      return this;
+    },
+    printResult() {
+      console.log(this.startNumber)
+      return this;
+    }
+  };
+  return calculator;
 }
 
-const redPants = { id: 1, name: 'Red Pants' };
-const whiteHat = { id: 2, name: 'White Hat' };
-const blackSneakers = { id: 3, name: 'Black Sneakers' };
-
-console.log('--- Dress Store ---');
-const dressStore = createStore();
-dressStore(redPants);
-dressStore(whiteHat)
-
-console.log('--- Shoes Store ---');
-const shoesStore = createStore();
-shoesStore(blackSneakers);
+const calculator = calculate();
+calculator.add(2).add(4).multiply(3).sub(1).sub(3).divide(2).printResult(); // Il risultato sarà: 7
