@@ -1,37 +1,62 @@
 const person1 = {
   firstName: 'John',
   lastName: 'Doe',
-  age: 25
+  age: 25,
+  address: {
+    state: 'Italy',
+    region: 'Lazio',
+    city: 'Rome'
+  }
 };
 
-// Modifica la linea sottostante affinché venga creata e assegnata a person2 
-// una copia esatta di person1, permettendo così di modificare il "firstName" di person2,
-// senza che venga modificato anche il valore "firstName" di person1
-
-// METODO 1
-const person2 = Object.assign({}, person1);
-
-// METODO 2
-
-// const person2 = {};
-
-// for (const key in person1) {
-//   if (Object.hasOwnProperty.call(person1, key)) {
-//     person2[key] = person1[key];
-//   }
-// }
+// Argh! Nonostante abbia utilizzato Object.assign(), modificando la proprietà "address",
+// viene modificato il riferimento all'oggetto person1
 
 
-// METODO 3 (uno senza motivo)
-// const keys = Object.keys(person1);
-// const values =  Object.values(person1);
-// const person2 = {};
+// METODO 1 (sarebbe tedioso se ci fossero troppe nidificazioni)
 
-// for (let i = 0; i < keys.length; i++) {
-//   person2[keys[i]] = values[i];
-// }
+// const person2 = Object.assign({}, person1);
+// person2.address = Object.assign({}, person2.address);
 
 
-person2.firstName = 'Simon';
+// METODO 2 (dopo la circarca online)
+
+// const person2 = JSON.parse(JSON.stringify(person1));
+
+
+// METODO  3 - by Filippo Di Marco
+
+const deepClone = {
+//assegnatore
+  assign(target = {}, obj) {
+    objClone = Object.assign(target, obj);
+    
+    this.correction(objClone);
+
+    return objClone;
+  },
+//correttore
+  correction(obj) {
+    for (const key in obj) {
+      if (Object.hasOwnProperty.call(obj, key)) {
+        
+        if(typeof obj[key] === 'object'){
+          
+          obj[key] = Object.assign({}, obj[key]);
+          
+          return this.correction(obj[key]);
+        }
+      }
+    }
+  }
+
+}
+
+const person2 = deepClone.assign({},person1);
+
+
+person2.address.region = 'Lombardia';
+person2.address.city = 'Milan';
+
 console.log(person1);
 console.log(person2);
