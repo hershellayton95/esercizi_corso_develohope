@@ -1,30 +1,17 @@
-function memoize(fn) {
-  let cache = {};
+const person1 = {
+  firstName: 'John',
+  lastName: 'Doe',
+  age: 25
+};
 
-  return (n) => {
-    let result = "";
-    
-    if (!cache[n]){
-      cache[n] = fn(n);
-      result = `Calculating result for ${cache[n]}`
-    } else if (cache[n]){
-      result = `Fetching from cache for ${cache[n]}`
-    }
+const person2 = person1;
 
-    return result;
-  }
-  
-}
+// Modifica la proprietà "firstName" di person2 in "Simon"
+person2.firstName = "Simon"
 
-function factorial(x) {
-  if (x === 0) {
-    return 1;
-  }
+console.log(person1);
+console.log(person2);
 
-  return x * factorial(x - 1);
-}
-
-let factory = memoize(factorial);
-console.log(factory(10));
-console.log(factory(6));
-console.log(factory(5));
+/*Gli oggetti sono variabili che funzionano per riferimento verso un valore.
+  tralasciando cosa avviene alla loro creazione, quando una variabile oggetto viene assegnata ad un'altra variabile, viene copiato solo il riferimento e condivideranno la memoria dove si trova o trovano le variabili.
+*/
