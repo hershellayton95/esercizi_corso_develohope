@@ -1,18 +1,7 @@
-function Person(firstName, lastName) {
-
-    this.firstName = firstName;
-    this.lastName = lastName;
-    
-    this.fullName = function () {
-        return this.firstName + " " + this.lastName;
-    }
-
-}
-
-
-const john = new Person("Jonh", "Doe");
-const simon = new Person("Simon", "Collins");
-
-
-console.log(john.fullName()); // John Doe
-console.log(simon.fullName()); // Simon Collins
+const person = {
+    firstName: 'John',
+    lastName: 'Doe'
+  };
+  
+  console.log(person.address?.city); // Argh! Cannot read property 'city' of undefined
+  console.log(person.fullName?.()); // Argh! Cannot read property 'fullName()' of undefined
