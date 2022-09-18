@@ -1,6 +1,5 @@
-function uncompletedNotes(notes) {
-  
-  // Metodo 1
+function firstUncompletedNote(notes) {
+  // Metodo 1 (rispetto a quello di prima ho aggiunto un break dopo aver pushato nell'array)
   // const undone = [];
   // let i = 0;
   
@@ -20,13 +19,14 @@ function uncompletedNotes(notes) {
 
   //   if(!state) {
   //     undone.push(notes[i]);
+  //     break;
   //   }
 
   //   i++;
   // }
  
-  // Metodo 2
-  let undone = notes.filter(item1 => item1.todos.some(item2 => item2.done === false) === true);
+  // Metodo 2 (rispetto al precedente ho sostutuito il filter con il finder)
+  let undone = notes.find(item1 => item1.todos.some(item2 => item2.done === false) === true);
 
 
   return undone;
@@ -40,7 +40,7 @@ const notes = [
       {
         id: 1,
         name: 'Push ups - 10 x 3',
-        done: false
+        done: true
       },
       {
         id: 2,
@@ -66,7 +66,7 @@ const notes = [
       {
         id: 2,
         name: 'Learn CSS',
-        done: true
+        done: false
       },
       {
         id: 3,
@@ -76,12 +76,33 @@ const notes = [
       {
         id: 4,
         name: 'Learn Angular',
+        done: false
+      }
+    ]
+  },
+  {
+    id: 3,
+    description: 'My Movies Library',
+    todos: [
+      {
+        id: 1,
+        name: 'La città incantata',
         done: true
+      },
+      {
+        id: 2,
+        name: 'Avatar',
+        done: true
+      },
+      {
+        id: 3,
+        name: 'Titanic',
+        done: false
       }
     ]
   }
 ]
 
-const notesInProgress = uncompletedNotes(notes);
-// console.log('All notes: ', notes);
-console.log('Notes In Progress: ', notesInProgress);
+const noteInProgress = firstUncompletedNote(notes);
+console.log('All notes: ', notes);
+console.log('First note in progress: ', noteInProgress);
