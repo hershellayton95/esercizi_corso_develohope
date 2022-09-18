@@ -1,38 +1,17 @@
-const person = {
-    // value
+function Person(firstName, lastName) {
+
+    this.firstName = firstName;
+    this.lastName = lastName;
     
-    // getter
-    get firstName() {
-        return this.name;
-    },
-
-    get lastName() {
-        return this.surname;
-    },
-
-    // setter
-    set firstName(name) {
-        this.name = name;
-    },
-
-    set lastName(surname) {
-        this.surname = surname;
-    },
-
-    // fuction
-    fullName() {
-        return this.name + " " + this.lastName
+    this.fullName = function () {
+        return this.firstName + " " + this.lastName;
     }
+
 }
 
-const john = Object.create(person);
-const simon = Object.create(person);
 
-john.firstName = "John";
-john.lastName = "Doe";
-
-simon.firstName = "Simon";
-simon.lastName = "Collins";
+const john = new Person("Jonh", "Doe");
+const simon = new Person("Simon", "Collins");
 
 
 console.log(john.fullName()); // John Doe
