@@ -1,7 +1,6 @@
-// di nuovo persons invece che people :__(
-function adultFilter(persons) {
+function nicknameMap(persons) {
 
-  return persons.filter(item => item.age >= 18);
+  return persons.map(item => `${item.name}-${item.age}`)
 
 }
 
@@ -18,6 +17,6 @@ const persons = [
   { name: 'Alice', age: 28 }
 ];
 
-const adults = adultFilter(persons);
+const nicknames = nicknameMap(persons);
 console.log(persons);
-console.log(adults);
+console.log(nicknames);
