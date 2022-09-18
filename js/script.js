@@ -1,27 +1,87 @@
-function calculateAverageAge(persons) {
-
-  const ages = persons.map(item => item.age);
-  const numerator = ages.reduce((x, xn) => (x + xn), 0);
-  const denominator = ages.length;
+function uncompletedNotes(notes) {
   
-  const average = numerator / denominator; 
+  // Metodo 1
+  // const undone = [];
+  // let i = 0;
+  
+  // while(notes[i]){
+    
+  //   let x = 0;
+  //   let state = true;
 
-  return average;
+  //   while (notes[i].todos[x]) {
+      
+  //     if(!notes[i].todos[x].done){
+  //       state =  false
+  //     } 
+
+  //     x++;
+  //   }
+
+  //   if(!state) {
+  //     undone.push(notes[i]);
+  //   }
+
+  //   i++;
+  // }
+ 
+  // Metodo 2
+  let undone = notes.filter(item1 => item1.todos.some(item2 => item2.done === false) === true);
+
+
+  return undone;
 }
 
-const persons = [
-  { name: 'Paul', age: 16 },
-  { name: 'George', age: 17 },
-  { name: 'Lucas', age: 21 },
-  { name: 'Marco', age: 32 },
-  { name: 'Peter', age: 18 },
-  { name: 'Carl', age: 13 },
-  { name: 'Simon', age: 24 },
-  { name: 'Mark', age: 15 },
-  { name: 'Sandra', age: 34 },
-  { name: 'Alice', age: 28 }
-];
+const notes = [
+  {
+    id: 1,
+    description: 'Workout program',
+    todos: [
+      {
+        id: 1,
+        name: 'Push ups - 10 x 3',
+        done: false
+      },
+      {
+        id: 2,
+        name: 'Abdominals - 20 x 3',
+        done: true
+      },
+      {
+        id: 3,
+        name: 'Tapis Roulant - 15min',
+        done: true
+      }
+    ]
+  },
+  {
+    id: 2,
+    description: 'Front-end Roadmap',
+    todos: [
+      {
+        id: 1,
+        name: 'Learn HTML',
+        done: true
+      },
+      {
+        id: 2,
+        name: 'Learn CSS',
+        done: true
+      },
+      {
+        id: 3,
+        name: 'Learn JavaScript',
+        done: true
+      },
+      {
+        id: 4,
+        name: 'Learn Angular',
+        done: true
+      }
+    ]
+  }
+]
 
-const average = calculateAverageAge(persons);
-console.log(persons);
-console.log(average);
+const notesInProgress = uncompletedNotes(notes);
+// console.log('All notes: ', notes);
+console.log('Notes In Progress: ', notesInProgress);
