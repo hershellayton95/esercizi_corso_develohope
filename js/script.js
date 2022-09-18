@@ -1,12 +1,39 @@
 const person = {
-  firstName: 'Mario',
-  lastName: 'Rossi',
-  age: 25
+    // value
+    
+    // getter
+    get firstName() {
+        return this.name;
+    },
+
+    get lastName() {
+        return this.surname;
+    },
+
+    // setter
+    set firstName(name) {
+        this.name = name;
+    },
+
+    set lastName(surname) {
+        this.surname = surname;
+    },
+
+    // fuction
+    fullName() {
+        return this.name + " " + this.lastName
+    }
 }
 
-// Print values of person using Object.keys
-const values = Object.values(person);
+const john = Object.create(person);
+const simon = Object.create(person);
 
-for (let i = 0; i < values.length; i++) {
-  console.log(`${values[i]}`);
-}
+john.firstName = "John";
+john.lastName = "Doe";
+
+simon.firstName = "Simon";
+simon.lastName = "Collins";
+
+
+console.log(john.fullName()); // John Doe
+console.log(simon.fullName()); // Simon Collins
