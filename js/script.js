@@ -36,7 +36,7 @@ class AreaCalculator {
       area = 3.14 * obj.radius ** 2;
     }
 
-    return area;
+    return `${area} mq`;
   }
 }
 
