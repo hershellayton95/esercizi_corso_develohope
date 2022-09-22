@@ -25,7 +25,7 @@ class AreaCalculator {
 
     if (obj instanceof Square) {
 
-      area = obj.side;
+      area = obj.side**2;
 
     } else if (obj instanceof Rectangle) {
 
