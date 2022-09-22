@@ -1,26 +1,38 @@
 class BankAccount {
+  #amount = 0;
 
-  #saldo;
-
-  constructor(money){
-    this.#saldo = money;
+  constructor(initialAmount) {
+    this.#amount = initialAmount;
   }
 
-  deposit(money){
-    this.#saldo = this.#saldo + money;
+  deposit(amount) {
+    this.#amount += amount;
   }
 
-  withdraw(money){
-    this.deposit(money * -1);
+  withdraw(amount) {
+    this.#amount -= amount;
   }
 
-  view(){
-    console.log(this.#saldo);
+  view() {
+    console.log(this.#amount);
   }
 }
 
-const bankAccount = new BankAccount(1000);
-bankAccount.deposit(500);
-bankAccount.deposit(200);
-bankAccount.withdraw(800);
-bankAccount.view();
+class BankAccountVip extends BankAccount {
+
+  deposit(amount) {
+    if (amount >= 1000) {
+      super.deposit(amount * 1.03);
+    } else {
+      super.deposit(amount);
+    }
+  }
+
+}
+
+const bankAccountVip = new BankAccountVip(1000);
+bankAccountVip.deposit(500);
+bankAccountVip.deposit(1200);
+bankAccountVip.withdraw(800);
+bankAccountVip.deposit(3500);
+bankAccountVip.view();
