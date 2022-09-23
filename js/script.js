@@ -1,49 +1,44 @@
-class Square {
-  constructor(side) {
-    this.side = side;
+class Person {
+
+  //costruttore
+  constructor(firstName,lastName,age){
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.age = age;
+  }
+
+  // getter 
+  get firstName(){
+    return this.firstName;
+  }
+
+  get lastName(){
+    return this.lastname;
+  }
+
+  get age (){
+    return this.age;
+  }
+
+  get fullName(){
+    return this.name + " " + this.surname
+  }
+
+  // setter 
+  set firstName(firstName){
+    this.name = firstName;
+  }
+  set lastName(lastName){
+    this.surname = lastName;
+  }
+  set age (age){
+    this.ages = age;
   }
 }
 
-class Rectangle {
-  constructor(width, height) {
-    this.width = width;
-    this.height = height;
-  }
-}
+const person = new Person('Mario', 'Rossi', 25);
+console.log(person.fullName);
 
-class Circle {
-  constructor(radius) {
-    this.radius = radius;
-  }
-}
-
-class AreaCalculator {
-
-  static calculate(obj) {
-    
-    let area = 0;
-
-    if (obj instanceof Square) {
-
-      area = obj.side**2;
-
-    } else if (obj instanceof Rectangle) {
-
-      area = obj.width * obj.height;
-
-    } else if (obj instanceof Circle) {
-
-      area = 3.14 * obj.radius ** 2;
-    }
-
-    return `${area} mq`;
-  }
-}
-
-const square = new Square(4);
-const rectangle = new Rectangle(4, 2);
-const circle = new Circle(5);
-
-console.log(AreaCalculator.calculate(square));
-console.log(AreaCalculator.calculate(rectangle));
-console.log(AreaCalculator.calculate(circle));
+person.firstName = 'Maria';
+person.lastName = 'Verdi';
+console.log(person.fullName);
