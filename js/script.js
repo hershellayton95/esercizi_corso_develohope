@@ -1,10 +1,4 @@
-const person = {
-  id: 1,
-  firstName: 'Mario',
-  lastName: 'Rossi',
-  age: 25
-};
-
-const {id, ...personInfo} = person;
-
-console.log(id, personInfo);
+let numberStore = [0, 1, 2];
+let newNumber = 3;
+numberStore = [...numberStore, newNumber];
+console.log(numberStore);
