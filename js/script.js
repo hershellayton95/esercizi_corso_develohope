@@ -1,5 +1,10 @@
-function sum(...num) {
-  return num.reduce((x, y) => {return x = x + y});
-}
+const person = {
+  id: 1,
+  firstName: 'Mario',
+  lastName: 'Rossi',
+  age: 25
+};
 
-console.log(sum(1, 2, 3, 4, 5));
+const {id, ...personInfo} = person;
+
+console.log(id, personInfo);
