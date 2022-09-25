@@ -1,44 +1,42 @@
-class Person {
+class BankAccount {
+  #amount = 0;
 
-  //costruttore
-  constructor(firstName,lastName,age){
-    this.firstName = firstName;
-    this.lastName = lastName;
-    this.age = age;
+  constructor(initialAmount) {
+    this.#amount = initialAmount;
   }
 
-  // getter 
-  get firstName(){
-    return this.firstName;
+  deposit(amount) {
+    // throw an exception if amount is negative
+    try {
+      if (amount > 0) {
+        return this.#amount += amount;
+      } else {
+        throw new RangeError("The amount can't be negative.");
+      }
+    } catch (err) {
+      console.log(err.name+":", err.message);
+    }
   }
 
-  get lastName(){
-    return this.lastname;
+  withdraw(amount) {
+    try {
+      if (amount < this.#amount) {
+        return this.#amount -= amount;
+      } else {
+        throw new RangeError("This operation should not be possible, because you cannot withdraw more than the account balance.");
+      }
+    } catch (err) {
+      console.log(err.name+":", err.message);
+    }
   }
 
-  get age (){
-    return this.age;
-  }
-
-  get fullName(){
-    return this.name + " " + this.surname
-  }
-
-  // setter 
-  set firstName(firstName){
-    this.name = firstName;
-  }
-  set lastName(lastName){
-    this.surname = lastName;
-  }
-  set age (age){
-    this.ages = age;
+  view() {
+    console.log(this.#amount);
   }
 }
 
-const person = new Person('Mario', 'Rossi', 25);
-console.log(person.fullName);
-
-person.firstName = 'Maria';
-person.lastName = 'Verdi';
-console.log(person.fullName);
+const bankAccount = new BankAccount(1000);
+bankAccount.deposit(500);
+bankAccount.deposit(200);
+bankAccount.withdraw(10000); // This operation should not be possible, because you cannot withdraw more than the account balance
+bankAccount.view();
