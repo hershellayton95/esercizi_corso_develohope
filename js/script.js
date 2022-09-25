@@ -1,17 +1,5 @@
-const person = {
-  id: 1,
-  firstName: 'Mario',
-  lastName: 'Rossi',
-  age: 25,
-};
-
-function numericFilter(key, value) {
-  if (typeof value === "string") {
-    return undefined;
-  }
-  return value;
+function sum(...num) {
+  return num.reduce((x, y) => {return x = x + y});
 }
 
-const json = JSON.stringify(person, numericFilter);
-
-console.log(json); // Should return: { id: 1, age: 25 }
+console.log(sum(1, 2, 3, 4, 5));
