@@ -1,46 +1,33 @@
-class BankAccount {
-  #amount = 0;
+// come di default
+let num1 = 10;
+let num2 = 20;
+console.log('Before swap: ', num1, num2); // Before swap: 10 20
 
-  constructor(initialAmount) {
-    this.#amount = initialAmount;
-  }
+// Variable swapping
+let temp = num2;
+num2 = num1;
+num1 = temp;
 
-  deposit(amount) {
+console.log('After swap: ', num1, num2); // After swap: 20 10
 
-    try {
-      if (amount < 0) {
-        throw new Error('The amount provided cannot be negative');
-      } else {
-        return this.#amount += amount;
-      }
-    } catch (err) {
-      console.log(err.name+":", err.message);
-    }
-  }
+// come volete che io lo faccia
+num1 = 10;
+num2 = 20;
+console.log('Before swap: ', num1, num2); // Before swap: 10 20
 
+// spread swapping
+[num2, num1] = [num1, num2];
 
-  withdraw(amount) {
-    try {
-      if (amount < 0) {
-        throw new Error('The amount provided cannot be negative');
-      } else if (this.#amount < amount) {
-        throw new Error('You cannot withdraw more than account balance');
-      } else {
-        return this.#amount += amount;
-      }
-    } catch (err) {
-      console.log(err.name+":", err.message);
-    }
-  }
+console.log('After swap: ', num1, num2); // After swap: 20 10
 
-  view() {
-    console.log(this.#amount);
-  }
-}
+// metodo senza usare variabili temporanee
+num1 = 10;
+num2 = 20;
+console.log('Before swap: ', num1, num2); // Before swap: 10 20
 
-// Handle errors to avoid app crash
-const bankAccount = new BankAccount(1000);
-bankAccount.deposit(500);
-bankAccount.deposit(200);
-bankAccount.withdraw(10000);
-bankAccount.view();
+// XOR swap algorithm
+num1 = num1 + num2;
+num2 = num1 - num2;
+num1 = num1 - num2;
+
+console.log('After swap: ', num1, num2); // After swap: 20 10
