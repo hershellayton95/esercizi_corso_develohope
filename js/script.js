@@ -20,17 +20,20 @@ const persons = [
 ];
 
 function fetchPersonById(id) {
-  return new Promise((resolve,reject) => {
-    const person = persons.find(item => item.id === id);
+  return new Promise((resolve, reject) => {
     setTimeout(() => {
-
-      if(person){
-        resolve(person)
-      } else {
-        reject(new Error("id inesistemte"))
+      const person = persons.find(item => item.id === id);
+      
+      if (person) {
+        return resolve(JSON.stringify(person));
       }
+
+      return reject(`Person with id: ${id} doesn't exist`);
     }, 1000);
   });
 }
 
-fetchPersonById(4).then((person) => console.log(person)).catch((err)=>console.log(err));
+// core here
+fetchPersonById(1)
+.then((json) => {return JSON.parse(json)})
+.then(console.log)
