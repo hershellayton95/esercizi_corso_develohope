@@ -20,12 +20,17 @@ const persons = [
 ];
 
 function fetchPersonById(id) {
-  // code here
-  const obj = persons.filter(item => item.id == id);
-  return new Promise((resolve) => resolve(obj))
+  return new Promise((resolve,reject) => {
+    const person = persons.find(item => item.id === id);
+    setTimeout(() => {
+
+      if(person){
+        resolve(person)
+      } else {
+        reject(new Error("id inesistemte"))
+      }
+    }, 1000);
+  });
 }
 
-// code here
-console.log(fetchPersonById(1));
-console.log(fetchPersonById(2));
-console.log(fetchPersonById(3));
+fetchPersonById(4).then((person) => console.log(person)).catch((err)=>console.log(err));
