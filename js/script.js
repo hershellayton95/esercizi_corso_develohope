@@ -1,15 +1,31 @@
-function sum(...num) {
-  return num.reduce((x, y) => {return x = x + y});
+const persons = [
+  {
+    id: 1,
+    firstName: 'Mario',
+    lastName: 'Rossi',
+    age: 25
+  },
+  {
+    id: 2,
+    firstName: 'Maria',
+    lastName: 'Verdi',
+    age: 32
+  },
+  {
+    id: 3,
+    firstName: 'Giovanni',
+    lastName: 'Rossi',
+    age: 35
+  }
+];
+
+function fetchPersonById(id) {
+  // code here
+  const obj = persons.filter(item => item.id == id);
+  return new Promise((resolve) => resolve(obj))
 }
 
-const numbers = [1, 2, 3];
-console.log(sum(...numbers));
-
-//anche se, a questo punto:
-
-function sum1(num) {
-  return num.reduce((x, y) => {return x = x + y});
-}
-
-const numbers1 = [1, 2, 3];
-console.log(sum1(numbers1));
+// code here
+console.log(fetchPersonById(1));
+console.log(fetchPersonById(2));
+console.log(fetchPersonById(3));
