@@ -38,7 +38,7 @@ function fetchPersonById(id) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       const person = persons.find(item => item.id === id);
-      
+
       if (person) {
         return resolve(JSON.stringify(person));
       }
@@ -52,27 +52,26 @@ function fetchJobById(id) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       const job = jobs.find(item => item.id === id);
-      
+
       if (job) {
         return resolve(JSON.stringify(job));
       }
 
       return reject(`Job with id: ${id} doesn't exist`);
-    }, 1000);
+    }, 500);
   });
 }
 
 // core here
-async function fetchPersonJob(id){
-  
-  let person = await fetchPersonById(id)
-  .then((json) => {return JSON.parse(json)});
-  
-  let job = await fetchJobById(id)
-  .then((json) => {return JSON.parse(json)});
-  
-  return {person, job};
+function fetchPersonJobById(id) {
+
+  return Promise.race([
+
+      fetchPersonById(id),
+      fetchJobById(id)
+
+  ]);
+
 }
 
-fetchPersonJob(1)
-.then(console.log);
+fetchPersonJobById(1).then(arg => console.log(arg));
