@@ -33,11 +33,8 @@ function fetchPersonById(id) {
   });
 }
 
-async function asyncFetchPersonbyId(id) { 
-  return await fetchPersonById(id);
-}
-
-asyncFetchPersonbyId(2)
-.then((personJson) => JSON.parse(personJson))
-.then((person) => console.log(person))
-.catch((err) => console.error(err));
+(async () => {
+  const personJson = await fetchPersonById(4);
+  const person = await JSON.parse(personJson);
+  console.log(person);
+})().catch((err)=>{console.log(err)});
