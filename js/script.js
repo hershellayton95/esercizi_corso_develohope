@@ -26,6 +26,6 @@ function fetchPersonById(id) {
 }
 
 // code here
-console.log(fetchPersonById(1));
-console.log(fetchPersonById(2));
-console.log(fetchPersonById(3));
+fetchPersonById(1).then(console.log);
+fetchPersonById(2).then(console.log);
+fetchPersonById(3).then(console.log);
