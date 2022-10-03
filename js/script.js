@@ -4,10 +4,12 @@ function memoize(fn) {
   return (n) => {
     let result = "";
     
-    if (!cache[n]){
+    //if (!cache[n]){
+    if(!cache.hasOwnProperty(n)){
       cache[n] = fn(n);
       result = `Calculating result for ${cache[n]}`
-    } else if (cache[n]){
+    // } else if (cache[n]){
+    } else if (cache.hasOwnProperty(n)){
       result = `Fetching from cache for ${cache[n]}`
     }
 
