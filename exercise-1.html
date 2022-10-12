@@ -1,0 +1,26 @@
+<html>
+  <body>
+    <div id="container">
+      <button type="button" id="fetch-post">Fetch Post</button>
+      <button type="button" id="save-post">Save Post on LocalStorage</button>
+    </div>
+  </body>
+</html>
+
+<script>
+  // code here
+
+  const fetchButton = document.getElementById("fetch-post");
+  const storageButton = document.getElementById("save-post");
+
+  const fetchPost = async () => {
+    const request = await fetch('https://jsonplaceholder.typicode.com/posts/1');
+    const response = await request.json();
+  }
+
+  fetchButton.onclick = () => {
+    const obj = fetchPost().then((item)=>{return item});
+    console.log(obj);
+  }
+
+</script>
