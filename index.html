@@ -2,35 +2,41 @@
 
 <body>
     <div id="container">
-        <ul class="todo-list"></ul>
+        <form>
+            <div>
+                <label>Title</label>
+                <input type="text" id="todo-title" />
+            </div>
+            <div>
+                <label>Completed</label>
+                <input type="checkbox" id="todo-completed" />
+            </div>
+
+            <button type="submit" id="submit-todo"></button>
+        </form>
     </div>
 </body>
 
 </html>
 
 <script>
-    // code here
 
-    const obj = "";
+    document.getElementById("submit-todo").parentElement.addEventListener("submit", async(event) => {
 
-    const todoList = document.querySelector(".todo-list");
+        event.preventDefault(); //evito di refreshare la pagina
 
-    const fetchPost = async () => {
-        const request = await fetch('https://jsonplaceholder.typicode.com/todos');
-        const response = await request.json();
-        return response;
-    }
-
-    fetchPost().then((returned) => {
-        
-        for (const key in returned) {
-            // metodo 2
-            // todoList.innerHTML += `<li>${returned[key].title}</li>`;
-            // metodo 2
-            const liNode = document.createElement('li');
-            liNode.innerText = returned[key].title;
-            todoList.append(liNode);
-        }
-    });
+        await fetch('https://jsonplaceholder.typicode.com/posts', {
+        method: 'POST',
+        headers: {
+            "Content-type": "application/son; charset=UTF-8"
+        },
+        body: JSON.stringify({
+            title: "title",
+            completed: "completed"
+        })
+    })
+        .then(request => { return request.json() })
+        .then(json => console.log("Success:", json))
+    })
 
 </script>

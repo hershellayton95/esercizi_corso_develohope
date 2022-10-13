@@ -1,3 +1,2 @@
-# Network Requests - Exercise 1
-Implementare il codice necessario per recuperare tramite una richiesta HTTP la lista dei todos presente al seguente url: https://jsonplaceholder.typicode.com/todos. Successivamente creare dinamicamente una lista di elementi (`<li>`) contenente il titolo del todo (proprietà `title` presente nella collezione di oggetti restituiti dalla response) e appenderla all'elemento `.todo-list`.
-N.B: il body della response contiene la lista dei todos in formato json, utilizzare il metodo `.json` presente nella response per eseguire la deserializzazione.
+# Network Requests - Exercise 3
+Implementare il codice necessario per eseguire una richiesta HTTP che si occupa di creare un nuovo post. Per creare un nuovo post utilizzare il seguente url: https://jsonplaceholder.typicode.com/posts (metodo: POST). Il corpo della richiesta deve contenere un oggetto post con le seguenti informazioni: `title` e flag `completed`. I dati del post dovranno essere trasmessi in seguito alla compilazione di un form.
