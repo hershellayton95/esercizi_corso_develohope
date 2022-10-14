@@ -40,7 +40,7 @@
 
         event.preventDefault()
 
-        const data = new FormData(form);
+        const data = new FormData(personForm);
         const person = {};
         data.forEach((value, key) => {
             person[key] = value;
@@ -49,10 +49,5 @@
     }
 
     personForm.addEventListener("submit", submitPersonForm)
-
-
-
-
-
 
 </script>
